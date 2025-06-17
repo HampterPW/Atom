@@ -85,7 +85,12 @@ void Game::run() {
         SDL_Event e;
         while (SDL_PollEvent(&e)) {
             if (e.type == SDL_QUIT) running = false;
-            if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_SPACE) bird.flap();
+            if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_SPACE)
+                bird.flap();
+            if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT)
+                bird.flap();
+            if (e.type == SDL_FINGERDOWN)
+                bird.flap();
         }
         Uint32 now = SDL_GetTicks();
         float dt = (now - last) / 1000.f;
