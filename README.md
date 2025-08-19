@@ -1,3 +1,5 @@
+# **DISCONTUNED, DIDNT REALIZE ASSEMBLY WAS THIS HARD**
+
 # 🧬 Atom Language
 
 **Atom** is a universal low-level programming language designed to operate as close to the metal as assembly, yet remain portable across 20+ CPU architectures.
